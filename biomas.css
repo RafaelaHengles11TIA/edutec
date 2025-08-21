@@ -1,0 +1,156 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fundo da página */
+  body {
+    background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
+    overflow: hidden;
+    background-size: cover;
+    color: white;
+    font-size: 1rem; /* base = 16px */
+  }
+  
+  /* ---------- HEADER ---------- */
+  header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    z-index: 100;
+    top: 0;
+    transform-origin: top left;
+}
+
+header button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 2rem; 
+}
+
+header a {
+    padding: 1.5rem;
+    margin-left: 1rem;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+    z-index: 1000;
+    width: auto;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+header ul.show {
+    display: block;
+    opacity: 1;
+}
+
+header ul li {
+    margin: 1.2rem 0;
+    white-space: nowrap;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #AFACA9;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+  /* ---------- BIOMAS ---------- */
+  .biomas {
+    text-align: center;
+    margin: 10rem auto; /* 50px */
+    max-width: 92rem; /* 1000px */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10rem 1.25rem; /* 40px 20px */
+    border-radius: 0.9rem; /* 15px */
+  }
+  
+  .biomas h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem; /* 40px */
+    font-weight: bold;
+  }
+
+  
+  /* Container dos dois cards */
+  .primeiro, .segundo {
+    display: inline-block;
+    margin: 1.25rem; /* 20px */
+    background: white;
+    border-radius: 0.9rem; /* 15px */
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.9rem rgba(0,0,0,0.4); /* 4px 15px */
+    transition: transform 0.3s;
+    width: 25rem; /* 280px */
+    vertical-align: top;
+    text-align: center;
+  }
+  
+  .primeiro:hover,
+  .segundo:hover {
+    transform: scale(1.05);
+  }
+  
+  .primeiro img,
+  .segundo img {
+    width: 100%;
+    height: 12rem; /* 200px */
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Botões */
+  .primeiro button,
+  .segundo button {
+    margin: 1rem auto; /* 15px */
+    padding: 1rem 2rem; /* 10px 25px */
+    background: #2f6b32;
+    border: none;
+    border-radius: 0.4rem; /* 6px */
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+    font-family: ;
+  }
+  
+  .primeiro button:hover,
+  .segundo button:hover {
+    background: #1f4b22;
+  }
+  
+  .primeiro button a,
+  .segundo button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 48rem) { /* 768px */
+    .primeiro, .segundo {
+      width: 90%;
+      margin: 1rem auto; /* 15px */
+      display: block;
+    }
+  }
+  
