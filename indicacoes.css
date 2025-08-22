@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +8,13 @@ body {
     transform-origin: top left; /* Garante que o zoom não desloque elementos */
     width: auto;
     overflow-x: hidden;
+    background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
 }
 header {
     position: absolute;
@@ -68,11 +76,6 @@ header ul li a {
     font-size: 1.2rem;
 }
 
-img.imagemfundo {
-    width: 100%;
-    height: 100vh;
-    filter: brightness(60%);
-}
 
 
 

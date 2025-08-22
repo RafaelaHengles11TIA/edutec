@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
   }
+
   
   /* Fundo da página */
   body {
@@ -89,6 +89,8 @@ header ul li a {
     font-size: 3.5rem;
     margin-bottom: 2.5rem; /* 40px */
     font-weight: bold;
+    font-family: Arial, sans-serif;
+
   }
 
   
@@ -130,7 +132,7 @@ header ul li a {
     cursor: pointer;
     transition: background 0.3s;
     font-size: 0.9rem;
-    font-family: ;
+    font-family: "Bree Serif", serif;
   }
   
   .primeiro button:hover,
