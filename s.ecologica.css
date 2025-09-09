@@ -1,5 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-do-h1: #F6E8CE;
+    --cor-do-h2: #96DD9A;
+
+}
+
+body {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
 header {
-    position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -60,4 +78,97 @@ header ul li a {
 
 body {
     background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
+    display: block;
+    backdrop-filter: brightness(60%);
+    height: 130vh;
+}
+
+h1 {
+    font-family: Open Sans, sans-serif;
+    color: var(--cor-do-h1);
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 5rem;
+    height: 6.62rem;
+    margin-bottom: 7rem;
+}
+
+h2 {
+    font-family:  Bree Serif, serif;
+    color: var(--cor-do-h2);
+    font-size: 2.0rem;
+    margin-bottom: 2rem;
+     display: flex;
+     margin-left: 5rem;
+}
+
+
+
+.texto-imagem {
+    display: flex;
+    justify-content: center;
+    gap: 35rem;
+}
+
+
+p {
+    color: var(--cor-do-h1);
+    justify-content: right;
+   
+}
+
+.Quadrado {
+    background: rgba(0, 0, 0, 0.6);
+    width: 90rem;
+    height: 60rem;
+    margin: 3rem auto;
+    border-radius: 2rem;
+
+}
+
+.h2-texto {
+    text-decoration: column;
+    margin-left: -20rem;
+}
+
+.p {
+    line-height: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.plantinha {
+    width: 35rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+    background-color: #F6E8CE;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 33rem;
+}
+
+.botões {
+    display: flex;
+    justify-content: center;
+    gap: 33rem;
+    text-decoration: none;
+    color: var(--cor-do-h2);
+    font-size: 2.5rem;
+}
+
+.a1 {
+    text-decoration: none;
+    color: var(--cor-do-h2);
+    text-decoration: underline;
+}
+
+.a2 {
+    text-decoration: none;
+    color: var(--cor-do-h2);
+    text-decoration: underline;
 }

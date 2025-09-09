@@ -1,20 +1,20 @@
 
-body {
+*{
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: #181A19;
-    /* NOVO: Escala proporcional baseada na largura do dispositivo */
-    transform-origin: top left; /* Garante que o zoom não desloque elementos */
-    width: auto;
-    overflow-x: hidden;
-    background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    box-sizing: border-box;
 
+}
 
+body {
+    
+      
+        background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
+        backdrop-filter: brightness(60%);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
 }
 header {
     position: absolute;
@@ -76,8 +76,201 @@ header ul li a {
     font-size: 1.2rem;
 }
 
+h1 {
+    font-family: "Bree Serif", serif;
+    font-weight: 500;
+    color: white;
+    font-size: 3rem;
+    padding-top: 12rem;
+    margin-left: 2rem;
+}
 
 
+div.filmes {
+ display: flex;
+ margin-top: 2rem;
 
 
+ img {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    width: 20rem;
+ }
+
+ h4 {
+    font-family: "Inknut Antiqua", serif;
+    color: white;
+    font-weight: 100;
+ }
+
+ p {
+    font-family: "Inknut Antiqua", serif;
+    color: #AFACA9;
+ }
+}
+
+div.rio {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+}
+
+div.rio:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
+
+div.beijarochao {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+}
+
+div.beijarochao:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
+
+div.Ecologia {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    img {
+        width: 20rem;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+}
+
+div.Ecologia:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
+
+div.Vidanonossoplaneta {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+}
+div.Vidanonossoplaneta:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
+
+div.aultimahora {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    img {
+        width: 19rem;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+}
+
+div.aultimahora:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
+
+div.nossoplaneta {
+    background-color: #05110D;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    height: 35rem;
+    border-radius: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    div.legendas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -1rem;
+    }
+}
+
+div.nossoplaneta:hover {
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: #AFACA9;
+}
 

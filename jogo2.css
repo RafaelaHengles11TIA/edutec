@@ -10,7 +10,7 @@ body{
 }
 
 div {
-    background-image: url(./Assets_jogo/Assets_jogo/Dialogo1_Beto.png);        
+    background-image: url(./Assets_jogo/Assets_jogo/Dialogo.png);        
     background-position: center;   
     background-repeat: no-repeat;  
     background-size: cover;
@@ -31,6 +31,18 @@ span{
     color: #83be15;
 }
 
-.SetaAvancar{
-   height: 500px;
+img{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 100rem;
+    cursor: pointer;
 }
+
+a{
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+

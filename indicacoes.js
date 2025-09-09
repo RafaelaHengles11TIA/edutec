@@ -1,3 +1,9 @@
+new Siema({
+  loop: true
+})
+
+
+
 const button = document.querySelector("header button");
 const menu = document.querySelector("header ul");
 
@@ -13,3 +19,4 @@ document.addEventListener("click", (e) => {
     menu.classList.remove("show");
   }
 });
+

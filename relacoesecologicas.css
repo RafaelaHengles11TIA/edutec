@@ -1,10 +1,22 @@
-body {
-    background-color: #12241E;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tela {
+    backdrop-filter: brightness(60%);
+    height: 128vh;
+}
+
+body {
+    background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
+    background-repeat: no-repeat;
     height: 100vh;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    background-color: #12241E;
 }
 
 header {
@@ -24,7 +36,7 @@ header button {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-right: 2rem; 
+    margin-right: 2rem;
 }
 
 header a {
@@ -69,40 +81,102 @@ header ul li a {
 
 h1 {
     color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
     font-size: 5rem;
-    margin-left: 39rem;
-    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
 }
 
 .fundo {
-    margin-left: 7rem;
-    width: 105rem;
-    filter: brightness(50%);
-    position: relative;
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    width: 99.5rem;
+    height: 102rem;
+    margin-left: 10rem;
+    padding-left: 5.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
-.fundin {
-    filter: brightness(60%);
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-}
-
-p {
-    font-family: "Open Sans", sans-serif;
+.fundo p {
+    font-family: "Merriweather", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
+    font-weight: 200;
     font-variation-settings:
       "wdth" 100;
     color: white;
-    margin-left: 40rem;
-    margin-top: -80rem;
-    font-size: ;  
+    font-size: 1.8rem;
+    margin-left: 11rem;
+    margin-top: 2rem;
 }
 
+.imagens {
+    margin-left: 2rem;
+}
+
+.interacoes {
+    margin-left: -5rem;
+    padding-top: 7rem;
+    line-height: 3.5rem;
+}
+
+.intra {
+    padding-right: -2rem;
+    margin-top: -60rem;
+    background-color: #F6E8CE;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    margin-left: 47rem;
+    margin-right: 10.2rem;
+}
+
+.inter {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    background-color: #F6E8CE;
+    padding: 2rem;
+    margin-left: 47rem;
+    margin-right: 10.2rem;
+    padding-bottom: 6rem;
+}
+
+.intraa {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;  
+    margin-top: -30rem;
+    margin-left: 54rem;
+    background-color: #346136;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.inteer {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;  
+    font-size: 2rem;  
+    margin-top: -21rem;
+    margin-left: 54rem;
+    background-color: #346136;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

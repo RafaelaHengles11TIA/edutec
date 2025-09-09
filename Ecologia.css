@@ -1,8 +1,13 @@
-body {
-    background-color: #181A19;
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181A19;
     color: white;
+    overflow-x: hidden;
 }
 header {
     position: absolute;
@@ -27,14 +32,6 @@ header button {
 header a {
     padding: 1.5rem;
     margin-left: 1rem;
-}
-
-.ecotopics {
-    width: 18rem;
-}
-
-.menu {
-    width: 3.8rem;
 }
 
 header ul {
@@ -93,7 +90,7 @@ header ul li a {
 .introducao {
     position: absolute;
     padding-top: 40rem;
-    margin-left: 66.5rem;
+    margin-left: 59rem;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;
@@ -135,7 +132,7 @@ header ul li a {
     font-weight: 300;
     font-style: normal;
     font-size: 5rem;
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
     margin-top: 9rem;
 }
 
@@ -155,7 +152,7 @@ header ul li a {
     height: 35rem;
     margin-left: 8rem;
     border-radius: 5rem;
-    margin-top: -10rem;
+    margin-top: -8rem;
     filter: brightness(85%);
 
 }
@@ -166,7 +163,7 @@ header ul li a {
     margin: 2rem auto;
     padding: 1rem;
     margin-left: 59.5rem;
-    margin-top: -41rem;
+    margin-top: -37.5rem;
     margin-bottom: 31rem;
 }
 
@@ -225,10 +222,12 @@ h3 {
 
 .importancia {
     margin-top: -20rem;
+    margin-bottom: 10rem;
 }
 
 .area {
     padding-left: 42rem;
+    white-space: nowrap;
 }
 
 .populacoes {
@@ -242,7 +241,7 @@ h3 {
 
 .comunidades {
     margin-left: 42rem;
-    margin-top: -37.4rem;
+    margin-top: -33rem;
     background-color: #4e4d4d;
     backdrop-filter: brighntess(50%);
     height: 33rem;
@@ -252,7 +251,7 @@ h3 {
 
 .ecossistemas {
     margin-left: 80rem;
-    margin-top: -37.3rem;
+    margin-top: -33rem;
     background-color: #4e4d4d;
     backdrop-filter: brighntess(50%);
     height: 33rem;
@@ -269,7 +268,6 @@ h3 {
     font-family: "Merriweather", serif;
     font-size: 2.3rem;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
@@ -291,7 +289,6 @@ h3 {
     font-family: "Merriweather", serif;
     font-size: 2.3rem;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
@@ -313,7 +310,6 @@ h3 {
     font-family: "Merriweather", serif;
     font-size: 2.3rem;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
