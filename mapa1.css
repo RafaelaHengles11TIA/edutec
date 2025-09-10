@@ -9,7 +9,7 @@ body{
     max-height: 100vh;
 }
 
-div {
+.mapa {
     background-image: url(./Assets_jogo/Assets_jogo/Mapa.png);      
     background-position: center;   
     background-repeat: no-repeat;  

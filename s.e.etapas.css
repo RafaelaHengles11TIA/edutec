@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -9,19 +10,18 @@
     --cor-do-h2: #96DD9A;
     --cor-do-texto: #FFFFFF;
     --cor-do-quadrado: #3B6535;
-    --cor-da-segunda-pagina: #2E4F2E;
 
 }
 
 
 body {
     background-image: url(./Sucessão\ ecologica\ /image\ 49.png);
-    background-color: #2E4F2E;
-    background-repeat: no-repeat;
     backdrop-filter: brightness(60%);
-    height: 160vh;
+    height: 150vh;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: rgba(28, 47, 28, 1);
     
 }
 
@@ -145,3 +145,78 @@ h1 {
     margin-left: 2rem;
 }
 
+
+
+.subtitulo{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 5rem;
+    color: #F6E8CE;
+    margin-top: 10rem;
+}
+
+.primaria{
+    display: flex;
+    justify-content: left;
+
+    margin-left: 6rem;
+
+    margin-top: 8rem;
+    gap: 7rem;
+
+}
+
+.sem_img{
+    flex-direction: column; 
+
+
+    h3{
+        color: #F6E8CE;
+        font-family: "Open Sans", sans-serif;
+        font-size: 3rem;
+    }
+
+
+    .exemplo1, .exemplo2, .exemplo3{
+        color: #FFFFFF;
+        margin-top: 4rem;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+.secundaria{
+    display: flex;
+    justify-content: left;
+
+    margin-left: 6rem;
+
+    margin-top: 10rem;
+    gap: 7rem;
+
+}
+
+.sem_img2{
+    flex-direction: column; 
+
+
+    h3{
+        color: #F6E8CE;
+        font-family: "Open Sans", sans-serif;
+        font-size: 3rem;
+    }
+
+
+    .ex1, .ex2, .ex3{
+        color: #FFFFFF;
+        margin-top: 4rem;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+.setinha {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: right;
+}

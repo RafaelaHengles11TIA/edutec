@@ -46,7 +46,7 @@ header ul {
     margin: 0;
     display: none;
     position: absolute;
-    top: 10%;
+    top: 0.5%;
     right: 0.3rem;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 0.1rem;
@@ -87,10 +87,11 @@ h1 {
     font-family: Open Sans, sans-serif;
     color: var(--cor-do-h1);
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 9rem;
+    padding-top: 1rem;
     font-size: 5rem;
     height: 6.62rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 h2 {
@@ -107,7 +108,12 @@ h2 {
 .texto-imagem {
     display: flex;
     justify-content: center;
-    gap: 35rem;
+    gap: 30rem;
+    margin-bottom: 2.5rem;
+
+    h2{
+        margin-left: 9rem;
+    }
 }
 
 
@@ -138,8 +144,8 @@ p {
 }
 
 .plantinha {
-    width: 35rem;
-    height: 20rem;
+    width: 37rem;
+    height: 23rem;
     margin-bottom: 1rem;
     background-color: #F6E8CE;
     padding: 1.5rem;
