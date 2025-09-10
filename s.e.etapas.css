@@ -13,16 +13,19 @@
 
 }
 
-
-body {
+.fundo {
     background-image: url(./Sucessão\ ecologica\ /image\ 49.png);
     backdrop-filter: brightness(60%);
     height: 150vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: rgba(28, 47, 28, 1);
+
     
+}
+
+body {
+    background-color: rgba(28, 47, 28, 1);
 }
 
 header {
