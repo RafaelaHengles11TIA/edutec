@@ -27,12 +27,14 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.6; /* Aplica opacidade só na imagem de fundo */
+    opacity: 0.6; 
     z-index: -1;
 }
 
 header {
-    position: absolute;
+    top: 0;          /* encosta no topo */
+    left: 0;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -96,6 +98,9 @@ h1 {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    font-size: 3.75rem;
+    margin-top: 20rem;
+    margin-bottom: 15rem;
 }
 
 h2 {
@@ -103,6 +108,8 @@ h2 {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    font-size: 3.75rem;
+    margin-bottom: 3rem;
 }
 
 p {
@@ -112,5 +119,54 @@ p {
     font-variation-settings:
       "wdth" 100;
       font-size: 1.32rem;
+      font-weight: 500;
+}
 
+.time {
+    display: flex;         
+    justify-content: space-between;
+    gap: 4rem;  
+    justify-content: center;
+    margin-bottom: 20rem;
+}
+
+.pedro p {
+    text-align: center;
+}
+.sofia p {
+    text-align: center;
+}
+.rafa p {
+    text-align: center;
+}
+.nathan p {
+    text-align: center;
+}
+.eduardo p {
+    text-align: center;
+}
+
+.vini p {
+    text-align: center;
+}
+
+.oq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+}
+
+.li {
+    text-align: center;
+}
+
+.vi {
+    text-align: center;
+}
+
+.pro {
+    text-align: center;
 }

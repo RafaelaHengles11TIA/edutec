@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(../Ciclos\ Bioquimicos/fundo_nitrogenio.png);
+    background: url(./Ciclos\ Bioquimicos/fundo_nitrogenio.png);
     backdrop-filter: brightness(40%);
     height: 180vh;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ header ul {
     margin: 0;
     display: none;
     position: absolute;
-    top: 10%;
+    top: 0.5%;
     right: 0.3rem;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 0.1rem;
@@ -119,6 +119,9 @@ header ul li a {
         margin-top: 3rem;
         margin-bottom: 2rem;
         width: 60rem;
+        height: 41.3rem;
+        border-radius: 2rem;
+        filter: brightness(80%);
     }
 }
 
@@ -141,7 +144,6 @@ header ul li a {
 
 .primeiro, .segundo, .terceiro, .quarto{
     background: rgba(119, 115, 115, 0.5);
-    backdrop-filter: blur(90%);
     margin-bottom: 2rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -203,7 +205,24 @@ header ul li a {
     width: 15rem;
 }
 
+.terceira{
+
+    .icones{
+        margin-top: -2rem;
+    }
+}
+
+.quarta{
+
+    .icones{
+        margin-top: 1rem;
+    }
+}
+
 .seta_proximo{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
 }

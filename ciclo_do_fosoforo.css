@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(../Ciclos\ Bioquimicos/fundo_nitrogenio.png);
+    background: url(./Ciclos\ Bioquimicos/fundo_fosforo.png);
     backdrop-filter: brightness(40%);
     height: 180vh;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ header ul {
     margin: 0;
     display: none;
     position: absolute;
-    top: 10%;
+    top: 0.5%;
     right: 0.3rem;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 0.1rem;
@@ -120,7 +120,7 @@ header ul li a {
         margin-bottom: 2rem;
         width: 60rem;
         filter: brightness(80%);
-        border-radius: 5rem;
+        border-radius: 2rem;
     }
 }
 
@@ -201,10 +201,34 @@ header ul li a {
 }
 
 .icones{
-    width: 15rem;
+    width: 13rem;
+}
+
+.terceira{
+
+    .icones{
+        margin-top: 2rem;
+    }
+}
+
+.segunda{
+
+    .icones{
+        margin-top: -1rem;
+    }
+}
+
+.primeira{
+
+    .icones{
+        margin-top: -1rem;
+    }
 }
 
 .seta_proximo{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
 }

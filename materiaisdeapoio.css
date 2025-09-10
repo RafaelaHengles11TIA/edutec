@@ -6,8 +6,7 @@
 }
 
 body {
-    
-      
+
         background-image: url(./imagem_de_fundo/0368743_view-over-foggy-jungle_photowallpaper__800.jpeg);
         backdrop-filter: brightness(60%);
         background-repeat: no-repeat;
@@ -15,8 +14,8 @@ body {
         background-size: cover;
         background-position: center;
 }
+
 header {
-    position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -78,65 +77,62 @@ header ul li a {
 .fundo {
     background: rgba(0, 0, 0, 0.5);
     margin: 3rem auto; 
-    width: 90rem; 
-    height: 45rem;
+    width: 100rem; 
+    height: 46rem;
     padding: 4rem 4rem; 
     border-radius: 3rem; 
-    padding-top: 5rem;
+    padding-top: 0.5rem;
     display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; /* necessário pro h1 ficar sobreposto */
+}
+
+.fundo h1 {
+    color: white; 
+    font-size: 3rem; 
     
-    }
+    position: absolute;  /* título fixo em cima */
+    top: 1rem; 
+    left: 50%; 
+    transform: translateX(-50%); /* centraliza no meio */
 
-.videos {
+    font-family: "Bree Serif", serif;
+    font-weight: 200;
+}
+
+/* grade de vídeos 2x2 */
+.videos-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;   
-}
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 2rem;
+    margin-top: 6rem; /* espaço para não encostar no título */
 
-.video1 {
-    position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-
-  .thumbnail {
-    width: 100%;
-    display: block;
-    border-radius: 15px;
-  }
-
-}
-
-.video1:hover {
-  transform: scale(1.03);
+   
 }
 
 
 
-
-/* Ícone de play centralizado */
-.video1 .play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  transform: translate(-50%, -50%);
-  opacity: 0.9;
+/* imagem dos vídeos */
+.thumbnail {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
 }
 
-/* Texto abaixo da imagem */
-.video-card p {
-  text-align: center;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  font-size: 1rem;
-  padding: 10px;
-  margin: 0;
-  border-radius: 0 0 15px 15px;
+/* animação hover */
+.thumbnail:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
 }
 
+.fundo p {
+    color: white;
+    margin-top: 0.2rem;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 0.8rem;
+}
 
-
-
-
+.videos1 {
+    width: 29.56rem;
+    height: 16.12rem;
+}
