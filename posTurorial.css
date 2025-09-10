@@ -9,7 +9,7 @@ body{
     max-height: 100vh;
 }
 
-div {
+.mapa {
     background-image: url(./Assets_jogo/Assets_jogo/Dialogo.png);      
     background-position: center;   
     background-repeat: no-repeat;  
@@ -45,7 +45,7 @@ a{
     cursor: pointer;
     background-color: transparent;
     margin-left: 98.5rem;
-    margin-top: 4rem;
+    margin-top: 1.2rem;
 }
 
 /* --- POPUP --- */
