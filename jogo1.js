@@ -1,4 +1,3 @@
-// Seleciona elementos
 const openBtn = document.getElementById("openPopup"); // botão da porta
 const overlay = document.getElementById("popupOverlay"); // fundo escuro
 const yesBtn = document.getElementById("yesBtn"); // botão "Sim"
@@ -24,4 +23,21 @@ overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
     overlay.style.display = "none";
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const botao = document.getElementById("btnComecar");
+
+  botao.addEventListener("click", () => {
+      const email = localStorage.getItem("emailJogador");
+
+      if (!email) {
+          alert("Você precisa estar logado para jogar!");
+          window.location.href = "../frontend/login/login.html";
+          return;
+      }
+
+      // Se estiver logado, envia para a próxima fase do jogo
+      window.location.href = "../jogo2.html";
+  });
 });

@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -32,7 +27,6 @@ header button {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-right: 2rem; 
 }
 
 header a {
@@ -108,4 +102,34 @@ button {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     border: 0.4rem solid white;
+}
+
+/* -------------------------------------------------- */
+/*                 CSS ADICIONADO (LOGIN)             */
+/* -------------------------------------------------- */
+
+.login-btn {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 0.5rem 1.4rem;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+/* Hover */
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.logs {
+    display: flex;         
+    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 2rem;
 }

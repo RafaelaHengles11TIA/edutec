@@ -1,134 +1,94 @@
-const questions = [
-    { question: "Qual é o principal fator que limita a fotossíntese em florestas tropicais úmidas?", answers: [
-        {id: 1, text: "Isponibilidade de água", correct:false},
-        {id: 2, text: "Intensidade luminosa", correct:false},
-        {id: 3, text: "Disponibilidade de nutrientes no solo", correct:true},
-        {id: 4, text: "Concentração de oxigênio", correct:false},
-    ]},
-    { question: "O conceito de capacidade de suporte em ecologia se refere a:", answers: [
-        {id: 1, text: "A quantidade máxima de energia que pode circular em uma teia alimentar", correct:false},
-        {id: 2, text: "O número máximo de indivíduos que um ecossistema pode sustentar sem se degradar", correct:true},
-        {id: 3, text: "A taxa de natalidade necessária para equilibrar a mortalidade", correct:false},
-        {id: 4, text: "O tempo de recuperação de um ecossistema após uma perturbação", correct:false},
-    ]},
-    { question: "O ciclo do fósforo difere do ciclo do nitrogênio porque:", answers: [
-        {id: 1, text: "O fósforo não passa pela atmosfera de forma significativa", correct:true},
-        {id: 2, text: "O fósforo depende de bactérias fixadoras para entrar no solo", correct:false},
-        {id: 3, text: "O nitrogênio não se acumula em rochas", correct:false},
-        {id: 4, text: "O fósforo não é reciclado na teia alimentar", correct:false},
-    ]},
+// finalPrint.js
 
-    { question: "Por que eu vejo medo nos seus olhos?", answers: [
-        {id: 1, text: "...", correct:false},
-        {id: 2, text: "...", correct:false},
-        {id: 3, text: "...", correct:false},
-        {id: 4, text: "...", correct:false},
-    ]},
-    { question: "Você é fraco.", answers: [
-        {id: 1, text: "...", correct:false},
-        {id: 2, text: "...", correct:false},
-        {id: 3, text: "...", correct:false},
-        {id: 4, text: "...", correct:false},
-    ]},
-    { question: "Seu fim chegou", answers: [
-        {id: 1, text: "...", correct:false},
-        {id: 2, text: "...", correct:false},
-        {id: 3, text: "...", correct:false},
-        {id: 4, text: "...", correct:false},
-    ]}
-    
-];
+// --- CONFIGURAÇÃO ---
+const RANKING_URL = "http://localhost:3333/salvar-tempo";
+const BTN_ID = "btnPontuacao";
+const TEMPO_KEY = "tempoFinal";
+const EMAIL_KEY = "emailJogador";
+const FLAG_KEY = "tempoEnviado"; // evita reenvio repetido
 
-const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
+// Esconder botão imediatamente (caso esteja visível no HTML)
+const btn = document.getElementById(BTN_ID);
+if (btn) btn.style.display = "none";
 
-let currentQuestionIndex = 0;
-let score = 0;
-
-function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    nextButton.style.display = "none";
-    showQuestion();
+// Se o botão existirá dentro do body com onclick, evitar que o clique no botão
+// dispare o onclick do body (previne redirecionamento indesejado)
+if (btn) {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // o <a> já tem href para ranking, então não precisamos fazer mais nada aqui
+  });
 }
 
-function showQuestion() {
-    resetState();
-    const currentQuestion = questions[currentQuestionIndex];
-    questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerText = answer.text;
-        button.classList.add("btn");
-        button.dataset.correct = answer.correct;
-        button.addEventListener("click", selectAnswer);
-        answerButtons.appendChild(button);
-    });
-}
-
-function resetState() {
-    nextButton.style.display = "none";
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
-    }
-}
-
-function selectAnswer(e) {
-    const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
-
-    if (isCorrect) score++;
-
-    Array.from(answerButtons.children).forEach(button => {
-        button.disabled = true;
-        if (button.dataset.correct === "true") button.classList.add("correct");
-        else button.classList.add("incorrect");
+// Função que envia a pontuação para o backend
+async function enviarTempoParaBackend(email, tempoFinal) {
+  try {
+    const res = await fetch(RANKING_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        tempoFinal: Number(tempoFinal)
+      })
     });
 
-    if (currentQuestionIndex === questions.length - 1) {
-        nextButton.style.display = "block";
-        if (score === questions.length) {
-            nextButton.innerText = "Seu fim chegou";
-            nextButton.onclick = () => window.location.href = "finalPrint.html";
-        } else {
-            nextButton.innerText = "Seu fim chegou";
-            nextButton.onclick = () => window.location.href = "finalPrint.html";
-        }
-    } else {
-        setTimeout(() => {
-            currentQuestionIndex++;
-            showQuestion();
-        }, 500);
+    if (!res.ok) {
+      console.error("Servidor retornou erro ao salvar tempo:", res.status);
+      return false;
     }
-}
 
-startQuiz();
-
-const openBtn = document.getElementById("openPopup"); // botão da porta
-const overlay = document.getElementById("popupOverlay"); // fundo escuro
-const yesBtn = document.getElementById("yesBtn"); // botão "Sim"
-const noBtn = document.getElementById("noBtn");   // botão "Não"
-
-// Abrir pop-up
-openBtn.addEventListener("click", () => {
-  overlay.style.display = "flex";
-});
-
-// Fechar pop-up no botão "Não"
-noBtn.addEventListener("click", () => {
-  overlay.style.display = "none";
-});
-
-// Redirecionar ao clicar em "Sim"
-yesBtn.addEventListener("click", () => {
-  window.location.href = "index.html"; // ajuste o link da sua página inicial
-});
-
-// Fechar clicando fora da caixa
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) {
-    overlay.style.display = "none";
+    console.log("Tempo enviado com sucesso!");
+    return true;
+  } catch (err) {
+    console.error("Erro ao enviar tempo:", err);
+    return false;
   }
+}
+
+// Execução ao carregar a página
+window.addEventListener("load", async () => {
+  const email = localStorage.getItem(EMAIL_KEY);
+  const tempoFinal = localStorage.getItem(TEMPO_KEY);
+  const jaEnviado = localStorage.getItem(FLAG_KEY) === "true";
+
+  // Se não estiver logado, manda pro login (proteção extra)
+  if (!email) {
+    alert("Você precisa estar logado para ver sua pontuação.");
+    window.location.href = "../login/login.html"; // ajuste caso o caminho seja diferente
+    return;
+  }
+
+  // Mostrar botão apenas após tentativa de envio (ou timeout)
+  const mostrarBotao = () => {
+    if (btn) btn.style.display = "inline-block";
+  };
+
+  // Se não existe tempo salvo, apenas mostra o botão e sai (não envia nada)
+  if (!tempoFinal) {
+    console.warn("Nenhum tempoFinal encontrado no localStorage.");
+    // mostrar botão após curto delay para manter UX consistente
+    setTimeout(mostrarBotao, 800);
+    return;
+  }
+
+  // Se já enviou antes, só mostrar o botão e evitar reenvio
+  if (jaEnviado) {
+    console.log("Tempo já enviado anteriormente — não será reenviado.");
+    mostrarBotao();
+    return;
+  }
+
+  // Tenta enviar para o backend. Se falhar, ainda assim mostra o botão após 1s.
+  const enviado = await enviarTempoParaBackend(email, tempoFinal);
+  if (enviado) {
+    // marca como enviado para evitar duplicatas
+    localStorage.setItem(FLAG_KEY, "true");
+    // opcional: remover o tempo do localStorage para limpar (comente se quiser manter)
+    // localStorage.removeItem(TEMPO_KEY);
+  } else {
+    console.warn("Falha ao enviar tempo — o botão será mostrado para o usuário.");
+  }
+
+  // Mostrar botão (independente do resultado) — com pequena animação de UX
+  setTimeout(mostrarBotao, 600);
 });

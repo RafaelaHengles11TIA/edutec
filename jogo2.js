@@ -1,3 +1,10 @@
+// 🔒 BLOQUEAR ACESSO SE NÃO ESTIVER LOGADO
+const email = localStorage.getItem("emailJogador");
+if (!email) {
+  alert("Você precisa estar logado para jogar!");
+  window.location.href = "../login/login.html"; // ajuste o caminho conforme sua pasta
+}
+
 // Seleciona elementos
 const openBtn = document.getElementById("openPopup"); // botão da porta
 const overlay = document.getElementById("popupOverlay"); // fundo escuro

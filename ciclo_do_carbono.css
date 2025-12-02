@@ -80,6 +80,7 @@ header ul li a {
 
 .inicio-pagina{
     display: flex;
+    gap: 35rem;
     justify-content: center;
 
     h1{
@@ -87,22 +88,22 @@ header ul li a {
         font-family: "Bree Serif", serif;
         font-weight: 100;
         font-size: 9rem;
-        margin-left: 8rem;
+        margin-left: 6rem;
         margin-bottom: 9rem;
         margin-top: 5rem;
 
     }
 
+
     p{
         color: #FFFFFF;
         font-family: "Bree Serif", serif;
         font-size: 4rem;
-        margin-left: 4rem;
         line-height: 1;
     }
 
     img{
-        margin-right: 8rem;
+        margin-right: rem;
         height: 40rem;
         filter: brightness(80%);
     }
@@ -112,7 +113,7 @@ header ul li a {
 .circulamento{
     display: flex;
     justify-content: center;
-    gap: 3.5rem;
+    gap: 15rem;
 
 
     img{
@@ -141,6 +142,7 @@ header ul li a {
 
 .primeiro, .segundo, .terceiro, .quarto{
     background: rgba(119, 115, 115, 0.5);
+    margin-right: 3rem;
     backdrop-filter: blur(90%);
     margin-bottom: 2rem;
     padding: 1rem;
